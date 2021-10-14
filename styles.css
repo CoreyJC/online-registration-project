@@ -16,24 +16,11 @@ label {
     margin-left:5px;
 }
 
-input, select {
-    width:90%;
-    height:3em;
-    border: solid 1px rgb(255, 255, 255);
-    border-radius:5px;
-    margin-left:5px;
-    background-color:rgb(235, 235, 235);
-}
 
-input value {
-position:right;
-}
+ /* classes */
 
 
-
-
-
-.divider {
+.divider1 {
     border-top:4px solid rgb(43, 47, 59);
     border-bottom:2px solid rgb(43, 47, 59);
     padding-top:2px;
@@ -41,7 +28,10 @@ position:right;
     background-color:rgb(221, 222, 226);
     margin:40px 15px 40px 15px;
 }
-
+.divider2 {
+    border-top:2px solid rgb(43, 47, 59);
+    margin:40px 15px 40px 15px;
+}
 .topbanner {
     color:white;
     background-color:rgb(43, 47, 59);
@@ -50,25 +40,60 @@ position:right;
     margin:0 auto;
     font-size:1.5em;
 }
-.formlabelzip {
-    width: 40%;
+.container {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
 }
 
 
-
-
+/* id's */
 
 
 #headerh1 {
     color:rgb(43, 47, 59);
     font-size:1.5em;
 }
-
 #headerp {
     color:rgba(101, 103, 109, 0.8);
     font-size:1.1em;
 }
-#cih3 {
+#cilegend {
     font-size:1.4em;
-    margin-left:15px;
+    margin-left:5px;
+}
+#choosestate {
+    opacity:0.4;
+}
+#formlabelzip {
+    width: 40%;
+}
+
+
+/* pseudo */
+
+
+.user-details .input-box input, select {
+    width:90%;
+    height:3em;
+    border: solid 1px rgb(255, 255, 255);
+    margin-left:5px;
+    background-color:rgb(235, 235, 235);
+}
+.user-details .input-box input:focus,
+.user-details .input-box textarea:focus {
+    border:1px solid rgb(43, 47, 59,0.8);
+    outline:none;
+}
+input::placeholder {
+text-align:left;
+font-style:italic;
+opacity:0.7;
+padding-right:10px;
+text-align:right;
+  }
+
+
+input[type="checkbox"]:checked + label {
+font-weight:bold;
 }
